@@ -1,18 +1,31 @@
-package com.site;
+package com.site
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import lombok.Data;
+import lombok.ToString;
+import sun.jvm.hotspot.debugger.Address;
 
 @Data
-@Entity
+@ToString
+
 public class Student {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    private String tech;
+    private int age;
+    private Address address;
+
+    public Student(int id, String name, int age, Address address) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.address=address;
+        System.out.println("Student Parameterized Constructor Called");
+    }
+
+    public void getHello() {
+        System.out.println("Hello Springers");
+    }
+    public void getDetails() {
+        System.out.println("Student Details " + this);
+    }
 
 }

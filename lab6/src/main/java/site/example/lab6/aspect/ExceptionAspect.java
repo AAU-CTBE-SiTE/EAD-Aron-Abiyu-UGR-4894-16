@@ -13,7 +13,7 @@ public class ExceptionAspect {
 
     private static final Logger logger = LoggerFactory.getLogger(ExceptionAspect.class);
 
-    @AfterThrowing(pointcut = "execution(* com.site.lab6.service.*.*(..))", throwing = "exception")
+    @AfterThrowing(pointcut = "execution(* site.example.lab6.service.*.*(..))", throwing = "exception")
     public void handleException(JoinPoint joinPoint, Throwable exception) {
         // You can log it, send an email, or trigger an alert system here
         logger.error("🚨 [ExceptionAspect] Intercepted error in '{}'. Message: '{}'",

@@ -14,7 +14,7 @@ public class PerformanceAspect {
     private static final Logger logger = LoggerFactory.getLogger(PerformanceAspect.class);
 
     // Intercept all service methods
-    @Around("execution(* com.site.lab6.service.*.*(..))")
+    @Around("execution(* site.example.lab6.service.*.*(..))")
     public Object measureExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {
         long startTime = System.currentTimeMillis();
 

@@ -1,4 +1,4 @@
-package com.site.lab6.aspect;
+package site.example.lab6.aspect;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;
@@ -12,7 +12,7 @@ public class LoggingAspect {
 
     private static final Logger logger = LoggerFactory.getLogger(LoggingAspect.class);
 
-    @Pointcut("execution(* com.site.lab6.service.*.*(..))")
+    @Pointcut("execution(* site.example.lab6.service.*.*(..))")
     public void serviceMethods() {}
 
     @Before("serviceMethods()")
